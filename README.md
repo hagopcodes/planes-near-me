@@ -31,7 +31,7 @@ python -m http.server 8080
 
 Then open `http://localhost:8080` for desktop behavior.
 
-For iOS compass/geolocation behavior, host over HTTPS (for example with Azure Static Web Apps) and open from Safari.
+For iOS compass/geolocation behavior, host over HTTPS (for example with GitHub Pages) and open from Safari.
 
 ## Deploy (GitHub Pages)
 
