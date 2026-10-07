@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#031106" />
+    <title>PlaneRadar</title>
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <h1>PlaneRadar</h1>
+        <div class="status" id="statusText">Ready</div>
+      </header>
+
+      <section id="startPanel" class="panel">
+        <p>Mobile-first radar scope for nearby aircraft.</p>
+        <button id="startBtn" class="btn primary">Start</button>
+        <p class="muted">Use HTTPS for geolocation + compass. If compass permission is denied, north-up mode is used.</p>
+      </section>
+
+      <section id="radarPage" class="hidden">
+        <div class="controls">
+          <button id="zoomOutBtn" class="btn">−</button>
+          <div id="zoomText">Range: 50 NM</div>
+          <button id="zoomInBtn" class="btn">+</button>
+          <button id="recalibrateBtn" class="btn">Recalibrate</button>
+          <button id="settingsBtn" class="btn">Settings</button>
+        </div>
+
+        <div class="radar-wrap" id="radarWrap">
+          <canvas id="radarCanvas" width="600" height="600" aria-label="Aircraft radar"></canvas>
+        </div>
+      </section>
+
+      <section id="detailPage" class="hidden panel">
+        <button id="detailBackBtn" class="btn">← Back</button>
+        <img id="planePhoto" alt="Aircraft photo" class="photo hidden" />
+        <div id="photoCredit" class="muted"></div>
+        <h2 id="detailCallsign">Flight</h2>
+        <ul class="details">
+          <li><strong>Airline:</strong> <span id="detailAirline">—</span></li>
+          <li><strong>Origin:</strong> <span id="detailOrigin">—</span></li>
+          <li><strong>Destination:</strong> <span id="detailDestination">—</span></li>
+          <li><strong>Altitude:</strong> <span id="detailAltitude">—</span></li>
+          <li><strong>Ground speed:</strong> <span id="detailSpeed">—</span></li>
+          <li><strong>Hex:</strong> <span id="detailHex">—</span></li>
+        </ul>
+      </section>
+
+      <section id="settingsPage" class="hidden panel">
+        <button id="settingsBackBtn" class="btn">← Back</button>
+        <h2>Settings</h2>
+        <label class="field">
+          Distance scale mode
+          <select id="distanceScaleSelect">
+            <option value="linear">Linear (authentic PPI)</option>
+            <option value="sqrt">Square-root (spread nearby)</option>
+          </select>
+        </label>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

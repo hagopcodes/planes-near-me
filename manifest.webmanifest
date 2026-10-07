@@ -1,0 +1,17 @@
+{
+  "name": "PlaneRadar",
+  "short_name": "PlaneRadar",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#031106",
+  "description": "Compass-oriented radar scope for nearby aircraft.",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Crect width='256' height='256' fill='black'/%3E%3Ccircle cx='128' cy='128' r='100' fill='none' stroke='%2374ff7d' stroke-width='8'/%3E%3Cline x1='128' y1='24' x2='128' y2='232' stroke='%2374ff7d' stroke-width='6'/%3E%3Cline x1='24' y1='128' x2='232' y2='128' stroke='%2374ff7d' stroke-width='6'/%3E%3Ccircle cx='128' cy='128' r='8' fill='%2374ff7d'/%3E%3C/svg%3E",
+      "sizes": "256x256",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
