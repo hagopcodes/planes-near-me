@@ -1,4 +1,4 @@
-import { declination } from '/wmm.js';
+import { declination } from './wmm.js';
 
 const SETTINGS_KEY = 'planeradar.settings.v1';
 const routeCache = new Map();
@@ -90,7 +90,7 @@ function init() {
   drawRadar();
 
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').catch(() => {});
+    navigator.serviceWorker.register('./sw.js').catch(() => {});
   }
 }
 

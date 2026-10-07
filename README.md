@@ -33,9 +33,15 @@ Then open `http://localhost:8080` for desktop behavior.
 
 For iOS compass/geolocation behavior, host over HTTPS (for example with Azure Static Web Apps) and open from Safari.
 
-## Deploy (Azure static hosting)
+## Deploy (GitHub Pages)
 
-This project is plain static files. Deploy the repository contents as-is to Azure Static Web Apps or Azure Blob static website hosting with HTTPS enabled.
+This project is plain static files and is configured to work from a repository subpath on GitHub Pages (for example `/plane-radar/`).
+
+- All local assets use relative paths.
+- The manifest uses relative `start_url` and `scope`.
+- The service worker is registered with a relative URL and caches shell assets under its scoped path.
+
+Publish with GitHub Pages (HTTPS is required for geolocation + compass in production use).
 
 ## Notes
 
